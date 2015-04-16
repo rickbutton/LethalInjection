@@ -3559,8 +3559,7 @@ public Action:Round_Start(Handle:event, String:event_name[], bool:dontBroadcast)
 		{
 			SetConVarBool(hBloodmoon, true);
 		}
-
-		CreateTimer(5.0, FixDoors, _, TIMER_FLAG_NO_MAPCHANGE);
+		//CreateTimer(5.0, FixDoors, _, TIMER_FLAG_NO_MAPCHANGE);
 	}
 }
 public Action:FixDoors(Handle:timer)
