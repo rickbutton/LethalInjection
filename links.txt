@@ -6,3 +6,4 @@ left4dead2/addons/l4dtoolz addons/l4dtoolz
 left4dead2/addons/metamod addons/metamod
 left4dead2/addons/metamod.vdf addons/metamod.vdf
 left4dead2/addons/sourcemod addons/sourcemod
+left4dead2/scripts/vscripts vscripts
