@@ -3214,7 +3214,6 @@ public Action:Player_Spawn(Handle:event, String:event_name[], bool:dontBroadcast
 						TankAlive[client] = 1;
 						TankAbility[client] = 0;
 						CreateTimer(0.1, TankSpawnTimer, client, TIMER_FLAG_NO_MAPCHANGE);
-						PrintToServer("iTankType is %d\n", iTankType);
 						if (iTankType == 0)
 						{
 							if (bInferno || bNightmare)
@@ -3826,11 +3825,11 @@ stock GetFinaleTankType()
 }
 stock SetTankType(client, type)
 {
-	PrintToServer("SetTankType DEBUG: %i", type);
 	if (type == 0)
 	{
 		type = GetFinaleTankType();
 	}
+	PrintToServer("Setting new tank type to %i", type);
 	switch(type)
 	{
 		case 1: SetEntityRenderColor(client, 255, 255, 255, 255); //Tech 75,95,105,255
