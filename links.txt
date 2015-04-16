@@ -1,0 +1,8 @@
+left4dead2/host.txt misc/host.txt
+left4dead2/motd.txt misc/motd.txt
+left4dead2/cfg/server.cfg cfg/server.cfg
+left4dead2/cfg/sourcemod cfg/sourcemod
+left4dead2/addons/l4dtoolz addons/l4dtoolz
+left4dead2/addons/metamod addons/metamod
+left4dead2/addons/metamod.vdf addons/metamod.vdf
+left4dead2/addons/sourcemod addons/sourcemod

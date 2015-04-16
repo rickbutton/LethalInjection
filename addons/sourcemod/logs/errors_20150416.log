@@ -8241,3 +8241,47 @@ L 04/16/2015 - 20:42:52: [SM] Native "L4D2_PummelEnd" reported: Failed to locate
 L 04/16/2015 - 20:42:52: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
 L 04/16/2015 - 20:42:52: [SM]   [0]  Line 11486, Master_3_46.sp::BreakInfectedHold()
 L 04/16/2015 - 20:42:52: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:52: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:52: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:52: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:52: [SM]   [1]  Line 3084, Master_3_46.sp::Player_Incapacitated()
+L 04/16/2015 - 20:46:53: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:53: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:53: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:53: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:54: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:54: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:54: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:54: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:55: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:55: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:55: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:55: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:56: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:56: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:56: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:56: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:57: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:57: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:57: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:57: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:58: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:58: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:58: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:58: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:46:59: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:46:59: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:46:59: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:46:59: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:47:00: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:47:00: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:47:00: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:47:00: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:47:01: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:47:01: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:47:01: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:47:01: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
+L 04/16/2015 - 20:47:02: [SM] Native "L4D2_TongueBreak" reported: Failed to locate function "CTerrorPlayer_OnTongueBreak"
+L 04/16/2015 - 20:47:02: [SM] Displaying call stack trace for plugin "Master_3_46.smx":
+L 04/16/2015 - 20:47:02: [SM]   [0]  Line 11500, Master_3_46.sp::BreakInfectedHold()
+L 04/16/2015 - 20:47:02: [SM]   [1]  Line 24557, Master_3_46.sp::OnPlayerTakeDamage()
