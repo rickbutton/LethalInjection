@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\extension.cpp" />
+    <ClCompile Include="..\natives.cpp" />
+    <ClCompile Include="..\timernatives.cpp" />
+    <ClCompile Include="..\util.cpp" />
+    <ClCompile Include="..\vglobals.cpp" />
+    <ClCompile Include="..\detours\change_finale_stage.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\cthrow_activate_ability.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\first_survivor_left_safe_area.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_crouch_top_speed.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_run_top_speed.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_walk_top_speed.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\has_configurable_difficulty.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\mob_rush_start.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\on_revived.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\send_in_rescue_vehicle.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdk\smsdk_ext.cpp">
+      <Filter>Source SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_it_mob.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_mob.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_special.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_tank.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_witch.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spawn_witchbride.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\start_melee_swing.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\try_offering_tank_bot.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\detour.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\codepatch\patchmanager.cpp">
+      <Filter>CodePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\asm\asm.c">
+      <Filter>Asm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\l4d2sdk\l4d2timers.cpp">
+      <Filter>L4D2 SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\on_staggered.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_script_value_float.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_script_value_int.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\get_script_value_string.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\select_sequence.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\on_healbegin.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\use_healing_items.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\witch_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\find_scavenge_item.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\witch_kill_incap_victim.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\witch_retreat.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\infected_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\boomer_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\charger_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\hunter_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\jockey_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\smoker_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\spitter_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\tank_attack_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\infected_alert_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+    <ClCompile Include="..\detours\survivor_use_object_update.cpp">
+      <Filter>Detours</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\convar_public.h" />
+    <ClInclude Include="..\extension.h" />
+    <ClInclude Include="..\util.h" />
+    <ClInclude Include="..\vglobals.h" />
+    <ClInclude Include="..\detours\change_finale_stage.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\cthrow_activate_ability.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\has_configurable_difficulty.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\first_survivor_left_safe_area.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_crouch_top_speed.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_run_top_speed.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_walk_top_speed.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\mob_rush_start.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\on_enter_ghost_state.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\on_revived.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\send_in_rescue_vehicle.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sdk\smsdk_config.h">
+      <Filter>Source SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sdk\smsdk_ext.h">
+      <Filter>Source SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_it_mob.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_mob.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_special.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_tank.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_witch.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spawn_witchbride.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\start_melee_swing.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\try_offering_tank_bot.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\auto_forward.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\detour.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\detour_template.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\codepatch\autopatch.h">
+      <Filter>CodePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\codepatch\icodepatch.h">
+      <Filter>CodePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\codepatch\patchmanager.h">
+      <Filter>CodePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CDetour\detourhelpers.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asm\asm.h">
+      <Filter>Asm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\l4d2sdk\constants.h">
+      <Filter>L4D2 SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\l4d2sdk\director.h">
+      <Filter>L4D2 SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\l4d2sdk\l4d2timers.h">
+      <Filter>L4D2 SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\on_staggered.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_script_value_float.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_script_value_int.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\get_script_value_string.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\select_sequence.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\on_healbegin.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\use_healing_items.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\witch_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\find_scavenge_item.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\witch_kill_incap_victim.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\witch_retreat.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\infected_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\boomer_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\charger_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\hunter_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\jockey_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\smoker_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\spitter_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\tank_attack_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\infected_alert_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="..\detours\survivor_use_object_update.h">
+      <Filter>Detours</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Detours">
+      <UniqueIdentifier>{75c61a90-6d3b-4078-91a1-6ba4444709fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source SDK">
+      <UniqueIdentifier>{9735e217-3d6a-4d64-8174-c5bb28a2530a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CodePatch">
+      <UniqueIdentifier>{b0c62bcf-4e00-496c-81d3-555a8ac6f6f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{e53db54b-0ec2-4c7c-a7df-28faa112888e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Asm">
+      <UniqueIdentifier>{98ba3dd6-cf4b-4ce4-b53b-a2f0fd1b85c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="L4D2 SDK">
+      <UniqueIdentifier>{daf04188-970b-43ba-99a0-654a1507f046}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

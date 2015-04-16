@@ -1,0 +1,38 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CRifleM60::PrimaryAttack"
+			{
+				"windows"
+				{
+					"signature" "CRifleM60::PrimaryAttack_Sig"				
+				}
+				"linux"
+				{
+					"signature" "CRifleM60::PrimaryAttack_Sig"
+				}
+			}
+		}
+		"Offsets"
+		{
+			"PrimaryAttackOffset"
+			{
+				"windows"		"271"
+				"linux"			"227"
+			}
+		}
+		"Signatures"
+		{
+			"CRifleM60::PrimaryAttack_Sig"
+			{
+				"library"		"server"
+				"windows"		"\x55\x8B\xEC\x51\x53\x56\x57\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x80\xBE\x2A\x15\x00\x00\x00"
+				"linux"			"@_ZN10CRifle_M6013PrimaryAttackEv"
+			}
+
+		}
+	}
+}

@@ -1,0 +1,119 @@
+﻿Build started 12/28/2014 12:37:33 AM.
+     1>Project "C:\Users\Machine\Desktop\L4D2Tools\msvc10\L4D2Tools.vcxproj" on node 2 (build target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>InitializeBuildStatus:
+         Creating "Release - Left 4 Dead 2\l4d2Tools.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.. /I..\sdk /I"D:\Downloads\Source Extensions\sourcemod-central\public" /I"D:\Downloads\Source Extensions\sourcemod-central\public\extensions" /I"D:\Downloads\Source Extensions\sourcemod-central\public\sourcepawn" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\public" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\public\engine" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\public\game\server" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\game\shared" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\public\tier0" /I"D:\Downloads\Source Extensions\hl2sdk-l4d2\public\tier1" /I"D:\Downloads\Source Extensions\mmsource\core" /I"D:\Downloads\Source Extensions\mmsource\core\sourcehook" /Zi /nologo /W3 /WX- /O2 /Ot /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D SDK_EXPORTS /D _CRT_SECURE_NO_DEPRECATE /D SOURCEMOD_BUILD /D SOURCE_ENGINE=4 /D _WINDLL /D _MBCS /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR- /Fo"Release - Left 4 Dead 2\\" /Fd"Release - Left 4 Dead 2\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\codepatch\patchmanager.cpp ..\detours\boomer_attack_update.cpp ..\detours\change_finale_stage.cpp ..\detours\charger_attack_update.cpp ..\detours\cthrow_activate_ability.cpp ..\detours\detour.cpp ..\detours\find_scavenge_item.cpp ..\detours\first_survivor_left_safe_area.cpp ..\detours\get_crouch_top_speed.cpp ..\detours\get_run_top_speed.cpp ..\detours\get_script_value_float.cpp ..\detours\get_script_value_int.cpp ..\detours\get_script_value_string.cpp ..\detours\get_walk_top_speed.cpp ..\detours\has_configurable_difficulty.cpp ..\detours\hunter_attack_update.cpp ..\detours\infected_alert_update.cpp ..\detours\infected_attack_update.cpp ..\detours\jockey_attack_update.cpp ..\detours\mob_rush_start.cpp ..\detours\on_healbegin.cpp ..\detours\on_revived.cpp ..\detours\on_staggered.cpp ..\detours\select_sequence.cpp ..\detours\send_in_rescue_vehicle.cpp ..\detours\smoker_attack_update.cpp ..\detours\spawn_it_mob.cpp ..\detours\spawn_mob.cpp ..\detours\spawn_special.cpp ..\detours\spawn_tank.cpp ..\detours\spawn_witch.cpp ..\detours\spawn_witchbride.cpp ..\detours\spitter_attack_update.cpp ..\detours\start_melee_swing.cpp ..\detours\survivor_use_object_update.cpp ..\detours\tank_attack_update.cpp ..\detours\try_offering_tank_bot.cpp ..\detours\use_healing_items.cpp ..\detours\witch_attack_update.cpp ..\detours\witch_kill_incap_victim.cpp ..\detours\witch_retreat.cpp ..\extension.cpp ..\l4d2sdk\l4d2timers.cpp ..\natives.cpp ..\timernatives.cpp ..\util.cpp ..\vglobals.cpp /MP /D SE_EPISODEONE=1 /D SE_DARKMESSIAH=2 /D SE_ORANGEBOX=3 /D SE_LEFT4DEAD=4 
+         patchmanager.cpp
+         boomer_attack_update.cpp
+         change_finale_stage.cpp
+         charger_attack_update.cpp
+         cthrow_activate_ability.cpp
+         detour.cpp
+         find_scavenge_item.cpp
+         first_survivor_left_safe_area.cpp
+         get_crouch_top_speed.cpp
+         get_run_top_speed.cpp
+         get_script_value_float.cpp
+         get_script_value_int.cpp
+         get_script_value_string.cpp
+         get_walk_top_speed.cpp
+         has_configurable_difficulty.cpp
+         hunter_attack_update.cpp
+         infected_alert_update.cpp
+         infected_attack_update.cpp
+         jockey_attack_update.cpp
+         mob_rush_start.cpp
+         on_healbegin.cpp
+         on_revived.cpp
+         on_staggered.cpp
+         select_sequence.cpp
+         send_in_rescue_vehicle.cpp
+         smoker_attack_update.cpp
+         spawn_it_mob.cpp
+         spawn_mob.cpp
+         spawn_special.cpp
+         spawn_tank.cpp
+         spawn_witch.cpp
+         spawn_witchbride.cpp
+         spitter_attack_update.cpp
+         start_melee_swing.cpp
+         survivor_use_object_update.cpp
+         tank_attack_update.cpp
+         try_offering_tank_bot.cpp
+         use_healing_items.cpp
+         witch_attack_update.cpp
+         witch_kill_incap_victim.cpp
+         witch_retreat.cpp
+         extension.cpp
+         l4d2timers.cpp
+         natives.cpp
+         timernatives.cpp
+         util.cpp
+         vglobals.cpp
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Downloads\Source Extensions\hl2sdk-l4d2-2a7450324ce5\lib\public" tier0.lib tier1.lib vstdlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /NODEFAULTLIB:LIBCD /NODEFAULTLIB:LIBCMTD /MANIFEST /ManifestFile:"Release - Left 4 Dead 2\L4D2Tools.ext.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.lib" /MACHINE:X86 /DLL "Release - Left 4 Dead 2\boomer_attack_update.obj"
+         "Release - Left 4 Dead 2\change_finale_stage.obj"
+         "Release - Left 4 Dead 2\charger_attack_update.obj"
+         "Release - Left 4 Dead 2\find_scavenge_item.obj"
+         "Release - Left 4 Dead 2\get_script_value_float.obj"
+         "Release - Left 4 Dead 2\get_script_value_int.obj"
+         "Release - Left 4 Dead 2\get_script_value_string.obj"
+         "Release - Left 4 Dead 2\hunter_attack_update.obj"
+         "Release - Left 4 Dead 2\infected_alert_update.obj"
+         "Release - Left 4 Dead 2\infected_attack_update.obj"
+         "Release - Left 4 Dead 2\jockey_attack_update.obj"
+         "Release - Left 4 Dead 2\on_healbegin.obj"
+         "Release - Left 4 Dead 2\on_staggered.obj"
+         "Release - Left 4 Dead 2\select_sequence.obj"
+         "Release - Left 4 Dead 2\send_in_rescue_vehicle.obj"
+         "Release - Left 4 Dead 2\smoker_attack_update.obj"
+         "Release - Left 4 Dead 2\spitter_attack_update.obj"
+         "Release - Left 4 Dead 2\start_melee_swing.obj"
+         "Release - Left 4 Dead 2\cthrow_activate_ability.obj"
+         "Release - Left 4 Dead 2\get_crouch_top_speed.obj"
+         "Release - Left 4 Dead 2\has_configurable_difficulty.obj"
+         "Release - Left 4 Dead 2\get_run_top_speed.obj"
+         "Release - Left 4 Dead 2\get_walk_top_speed.obj"
+         "Release - Left 4 Dead 2\spawn_mob.obj"
+         "Release - Left 4 Dead 2\spawn_it_mob.obj"
+         "Release - Left 4 Dead 2\survivor_use_object_update.obj"
+         "Release - Left 4 Dead 2\tank_attack_update.obj"
+         "Release - Left 4 Dead 2\use_healing_items.obj"
+         "Release - Left 4 Dead 2\witch_attack_update.obj"
+         "Release - Left 4 Dead 2\witch_kill_incap_victim.obj"
+         "Release - Left 4 Dead 2\witch_retreat.obj"
+         "Release - Left 4 Dead 2\extension.obj"
+         "Release - Left 4 Dead 2\natives.obj"
+         "Release - Left 4 Dead 2\timernatives.obj"
+         "Release - Left 4 Dead 2\util.obj"
+         "Release - Left 4 Dead 2\l4d2timers.obj"
+         "Release - Left 4 Dead 2\vglobals.obj"
+         "Release - Left 4 Dead 2\smsdk_ext.obj"
+         "Release - Left 4 Dead 2\asm.obj"
+         "Release - Left 4 Dead 2\detour.obj"
+         "Release - Left 4 Dead 2\first_survivor_left_safe_area.obj"
+         "Release - Left 4 Dead 2\mob_rush_start.obj"
+         "Release - Left 4 Dead 2\spawn_tank.obj"
+         "Release - Left 4 Dead 2\spawn_witch.obj"
+         "Release - Left 4 Dead 2\spawn_special.obj"
+         "Release - Left 4 Dead 2\spawn_witchbride.obj"
+         "Release - Left 4 Dead 2\try_offering_tank_bot.obj"
+         "Release - Left 4 Dead 2\on_revived.obj"
+         "Release - Left 4 Dead 2\patchmanager.obj"
+            Creating library C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.lib and object C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.exp
+         Generating code
+         Finished generating code
+         L4D2Tools.vcxproj -> C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Machine\Desktop\L4D2Tools\msvc10\Release - Left 4 Dead 2\L4D2Tools.ext.dll;#2" /manifest "Release - Left 4 Dead 2\L4D2Tools.ext.dll.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Release - Left 4 Dead 2\l4d2Tools.unsuccessfulbuild".
+         Touching "Release - Left 4 Dead 2\l4d2Tools.lastbuildstate".
+     1>Done Building Project "C:\Users\Machine\Desktop\L4D2Tools\msvc10\L4D2Tools.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.00
