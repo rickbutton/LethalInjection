@@ -13453,7 +13453,7 @@ stock CharMenuFunc(client)
 					AddMenuItem(menu, "Rochelle", "Rochelle");
 					AddMenuItem(menu, "Coach", "Coach");
 					AddMenuItem(menu, "Ellis", "Ellis");
-					//AddMenuItem(menu, "Zoey", "Zoey");
+					AddMenuItem(menu, "Zoey", "Zoey");
 					AddMenuItem(menu, "Francis", "Francis");
 					AddMenuItem(menu, "Louis", "Louis");
 					AddMenuItem(menu, "Bill", "Bill");
