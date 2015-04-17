@@ -333,6 +333,14 @@ forward Action:L4D2_OnChangeFinaleStage(&finaleType, const String:arg[]);
 forward Action:L4D2_OnEndVersusModeRound(bool:countSurvivors);
 
 /**
+ * @brief Called after CDirectorVersusMode::EndVersusModeRound(bool)
+ * @remarks Called after all score calculations inside CDirectorVersusMode::EndVersusModeRound(bool). This good forward to replace standard "round_end" hook.
+ * 
+ * @return 		noreturn
+ */
+forward L4D2_OnEndVersusModeRound_Post();
+
+/**
  * @brief Called when CBaseAnimating::SelectWeightedSequence(int Activity) is invoked with tank attack activity
  * @remarks Called whenever a tank uses his primary (punch) or secondary (throw) attack
  *
@@ -354,6 +362,72 @@ forward Action:L4D2_OnSelectTankAttack(client, &sequence);
  * @noreturn Pl_Handled to override return value, Pl_Continue otherwise.
  */
 forward Action:L4D2_OnRevived(client);
+
+/**
+ * @brief Called when SurvivorBot::UseHealingItems(Action<SurvivorBot> *) is invoked
+ * @remarks Causes bots to use or give healing items (except in safe room on non-expert)
+ *
+ * @param client	the client that will decide whether to use healing items
+ *
+ * @noreturn Pl_Handled to block, Pl_Continue otherwise.
+ */
+forward Action:L4D2_OnUseHealingItems(client);
+
+/**
+ * @brief Called after SurvivorBot::FindScavengeItem(Action<SurvivorBot> *) is invoked
+ * @remarks Indicates which item the Survivor Bot will attempt to pick up
+ *
+ * @param client	the client that will try to pick something up
+ * @param item		the item the client will try to pick up (null means no item)
+ *
+ * @noreturn Pl_Handled to block, Pl_Continue otherwise.
+ */
+forward Action:L4D2_OnFindScavengeItem(client, item);
+
+/**
+ * @brief Called whenever CBasePlayer::WaterMove() is invoked
+ * @remarks Couple it with a FL_INWATER check to be sure
+ *
+ * @param client	the client that is moving in the water
+ *
+ * @noreturn
+ */
+forward L4D2_OnWaterMove(client);
+
+/**
+ * @brief Called whenever CTerrorPlayer::OnStaggered(CBaseEntity *, Vector const *) is invoked
+ * @remarks Source is always null for Charger impacts(Valve)
+ *
+ * @param target	the client that is about to get staggered
+ * @param source	the client that is about to stagger the target
+ *
+ * @return 		Pl_Handled to block, Pl_Continue otherwise
+ */
+forward Action:L4D2_OnStagger(target, source);
+
+/**
+ * @brief Called whenever CTerrorWeapon::OnHit(CGameTrace &, Vector  const&, bool) is invoked
+ * @remarks Called for every single shovable and even some of the unshovable entities in the game
+ *
+ * @param client	survivor who did the shoving
+ * @param entity	entity that is about to get shoved
+ * @param weapon	weapon that has been held while shoving
+ * @param vector	not sure what are these coordinates, probably some kind of shove distance
+ * @param bIsHunterDeadstop	    a boolean to determine if it was a pounce from a height or not; reliable to a certain degree and should only be considered for hunters
+ *
+ * @return 		Pl_Handled to block, Pl_Continue otherwise
+ */
+forward Action:L4D2_OnEntityShoved(client, entity, weapon, Float:vector[3], bool:bIsHighPounce);
+
+/**
+ * @brief Called when the client's material system is expecting instructions from the server in regards to addons
+ * @remarks Doesn't fire if l4d2_addons_eclipse is -1 or 0
+ *
+ * @param SteamID   SteamID of the client expecting a matsys reply
+ *
+ * @return      Pl_Handled to let the client through with addons, Pl_Continue otherwise.
+ */
+forward Action:L4D2_OnClientDisableAddons(const String:SteamID[]);
 
 /**
  * @brief Get the current campaign scores stored in the Director
@@ -572,6 +646,7 @@ native L4D2_TongueBreak(client);
 native L4D2_Respawn(client);
 native L4D2_ReviveSurvivor(client);
 native L4D2_AdrenalineUsed(client, duration);
+
 
 /*
 Makes the extension required by the plugins, undefine REQUIRE_EXTENSIONS
