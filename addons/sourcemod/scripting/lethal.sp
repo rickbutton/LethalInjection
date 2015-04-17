@@ -13629,10 +13629,8 @@ public Action:SetCharacter(Handle:timer, any:client)
 			{
 				if (bIsL4D2)
 				{
-					SetEntProp(client, Prop_Send, "m_survivorCharacter", 1);
-					SetEntityModel(client, MODEL_ROCHELLE);
-					//SetEntProp(client, Prop_Send, "m_survivorCharacter", 5);
-					//SetEntityModel(client, MODEL_ZOEY);
+					SetEntProp(client, Prop_Send, "m_survivorCharacter", 5);
+					SetEntityModel(client, MODEL_ZOEY);
 				}
 				else
 				{
