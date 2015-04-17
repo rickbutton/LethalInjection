@@ -9963,7 +9963,7 @@ public Action:L4D2_OnChangeFinaleStage(&finaleType, const String:arg[])
 }
 public Action:L4D2_OnSendInRescueVehicle()
 {
-	PrintToServer("L4D2_OnSendInRescueVehicle entered")
+	PrintToServer("L4D2_OnSendInRescueVehicle entered");
 	if (iRescue == 0)
 	{
 		MsgAdmin("Rescue Called");
