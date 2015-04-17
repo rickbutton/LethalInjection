@@ -25224,6 +25224,7 @@ public Action:Command_Inferno(client, args)
 }
 public Action:Command_SendInRescueVehicle(client, args)
 {
+	iRescue = 1;
 	ReplyToCommand(client, "Attempting to call CDirectorScriptedEventManager::SendInRescueVehicle(void)");
 	L4D2_SendInRescueVehicle();
 	return Plugin_Handled;
