@@ -995,6 +995,8 @@ public OnPluginStart()
 	//RegAdminCmd("sm_inferno", Command_Inferno, ADMFLAG_KICK, "Inferno Gamemode On/Off");
 	//RegAdminCmd("sm_bloodmoon", Command_Bloodmoon, ADMFLAG_KICK, "Bloodmoon Gamemode On/Off");
 
+	RegAdminCmd("li_setlevel", Command_SetLevel, ADMFLAG_KICK, "li_setlevel <name> <level>");
+
 	AddCommandListener(Command_JoinTeam, "jointeam");
 
 	hHostname = FindConVar("hostname");
@@ -25165,6 +25167,50 @@ public Action:TestMenu4(client, args)
 }
 public Action:TestMenu5(client, args)
 {
+	return Plugin_Handled;
+}
+public Action:Command_SetLevel(client, args)
+{
+	if (args < 2)
+	{
+		PrintToConsole(client, "Usage: li_setlevel <name> <level>");
+		return Plugin_Handled;
+	}
+ 
+	new String:name[32], target = -1;
+	GetCmdArg(1, name, sizeof(name));
+ 
+	for (new i=1; i<=MaxClients; i++)
+	{
+		if (!IsClientConnected(i))
+		{
+			continue;
+		}
+		decl String:other[32];
+		GetClientName(i, other, sizeof(other));
+		if (StrEqual(name, other))
+		{
+			target = i;
+		}
+	}
+
+	new String:levelStr[3];
+	new level = -1;
+	GetCmdArg(2, levelStr, sizeof(levelStr));
+	new level = StringToInt(levelStr);
+
+	if (target == -1)
+	{
+		PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
+		return Plugin_Handled;
+	}
+
+	if (level <= 0) {
+		PrintToConsole(client, "\"%s\" is an invalid level", levelStr);
+	}
+ 
+	ResetLevelDB(client, level);
+ 
 	return Plugin_Handled;
 }
 public Action:Command_Nightmare(client, args)
