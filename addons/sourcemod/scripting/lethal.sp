@@ -9929,10 +9929,13 @@ stock ExecGameModes()
 				}
 				CreateTimer(0.1, SpawnTankTimer, _, TIMER_FLAG_NO_MAPCHANGE);
 			}
-			else if (iFinaleCountdown == 666)
+			else if (iFinaleCountdown == 10)
 			{
+				// ^ should be 666
 				iRescue = 1;
+				PrintToServer("Will send in rescue");
 				L4D2_SendInRescueVehicle();
+				PrintToServer("Did send in rescue");
 				iNumTanksWave += 666;
 				CreateTimer(0.1, SpawnTankTimer, _, TIMER_FLAG_NO_MAPCHANGE);
 				if (iNightmareBegin == 0)
