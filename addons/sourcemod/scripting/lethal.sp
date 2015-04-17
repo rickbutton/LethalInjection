@@ -25195,7 +25195,6 @@ public Action:Command_SetLevel(client, args)
 	}
 
 	new String:levelStr[3];
-	new level = -1;
 	GetCmdArg(2, levelStr, sizeof(levelStr));
 	new level = StringToInt(levelStr);
 
