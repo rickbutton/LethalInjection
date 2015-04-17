@@ -991,6 +991,7 @@ public OnPluginStart()
 	RegAdminCmd("sm_clientsetvoting", Command_SetVoting, ADMFLAG_KICK, "sm_clientsetvoting <#userid|name> [level]");
 
 	RegAdminCmd("sm_nightmare", Command_Nightmare, ADMFLAG_KICK, "Nightmare Gamemode On/Off");
+	RegAdminCmd("sm_rescue", Command_SendInRescueVehicle, ADMFLAG_KICK, "Send Rescue Vehicle");
 	//RegAdminCmd("sm_hell", Command_Hell, ADMFLAG_KICK, "Hell Gamemode On/Off");
 	//RegAdminCmd("sm_inferno", Command_Inferno, ADMFLAG_KICK, "Inferno Gamemode On/Off");
 	//RegAdminCmd("sm_bloodmoon", Command_Bloodmoon, ADMFLAG_KICK, "Bloodmoon Gamemode On/Off");
@@ -9929,13 +9930,10 @@ stock ExecGameModes()
 				}
 				CreateTimer(0.1, SpawnTankTimer, _, TIMER_FLAG_NO_MAPCHANGE);
 			}
-			else if (iFinaleCountdown == 10)
+			else if (iFinaleCountdown == 666)
 			{
-				// ^ should be 666
 				iRescue = 1;
-				PrintToServer("Will send in rescue");
 				L4D2_SendInRescueVehicle();
-				PrintToServer("Did send in rescue");
 				iNumTanksWave += 666;
 				CreateTimer(0.1, SpawnTankTimer, _, TIMER_FLAG_NO_MAPCHANGE);
 				if (iNightmareBegin == 0)
@@ -9965,6 +9963,7 @@ public Action:L4D2_OnChangeFinaleStage(&finaleType, const String:arg[])
 }
 public Action:L4D2_OnSendInRescueVehicle()
 {
+	PrintToServer("L4D2_OnSendInRescueVehicle entered")
 	if (iRescue == 0)
 	{
 		MsgAdmin("Rescue Called");
@@ -25221,6 +25220,12 @@ public Action:Command_Inferno(client, args)
 			SetConVarBool(hInferno, true);
 		}
 	}
+	return Plugin_Handled;
+}
+public Action:Command_SendInRescueVehicle(client, args)
+{
+	ReplyToCommand(client, "Attempting to call CDirectorScriptedEventManager::SendInRescueVehicle(void)");
+	L4D2_SendInRescueVehicle();
 	return Plugin_Handled;
 }
 public Action:Command_SetVoting(client, args)
