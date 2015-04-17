@@ -13406,11 +13406,11 @@ stock QuantifyWeapons()
 						PrintToServer("fixing weapon counts for %s", classname);
 						if (amount > 0)
 						{
-							SetEntProp(i, Prop_Data, "m_itemCount", 100);
+							SetEntProp(i, Prop_Data, "m_itemCount", amount);
 						}
 						else
 						{
-							SetEntProp(i, Prop_Data, "m_itemCount", 100);
+							SetEntProp(i, Prop_Data, "m_itemCount", 1);
 						}
 					}
 				}
