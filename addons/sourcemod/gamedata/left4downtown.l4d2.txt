@@ -903,6 +903,12 @@
 			/* 55 8B EC 51 53 8B D9 80 BB */
 			"linux" "@_ZN13CTerrorPlayer13OnPounceEndedEv"
 			}
+			
+			"CTerrorPlayer_OnTongueBreak"
+			{
+			"library"	"server"
+			"linux" "@_ZN13CTerrorPlayer19ReleaseTongueVictimEb"
+			}
 		}
 	}
 }
