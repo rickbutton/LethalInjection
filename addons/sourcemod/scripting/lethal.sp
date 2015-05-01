@@ -11483,6 +11483,7 @@ stock BreakInfectedHold(client)
 			if (GetEntPropEnt(Survivor[1], Prop_Send, "m_pummelAttacker") == client)
 			{
 				//L4D2_PummelEnd(client);
+				PrintToServer("should break pummel");
 				CallResetAbility(client, 3.0); 
 			}
 		}
@@ -11520,14 +11521,17 @@ stock CallResetAbility(client,Float:time)
 		hStartActivationTimer = EndPrepSDKCall();
 		CloseHandle(hConf);
 		
+		PrintToServer("will reset ability");
 		if (hStartActivationTimer == INVALID_HANDLE)
 		{
+			PrintToServer("failed to get StartActivationTimer");
 			SetFailState("Can't get CBaseAbility::StartActivationTimer SDKCall!");
 			return;
 		}            
 	}
 	new AbilityEnt=GetEntPropEnt(client, Prop_Send, "m_customAbility");
 	SDKCall(hStartActivationTimer, AbilityEnt, time, 0.0);
+	PrintToServer("called StartActivationTimer");
 }  
 stock ReturnChapterData()
 {
