@@ -718,6 +718,18 @@
 "linux" "@_ZN13CTerrorPlayer13OnPounceEndedEv"
 }
 
+"CTerrorPlayer_OnTongueBreak"
+{
+"library"	"server"
+"linux" "@_ZN13CTerrorPlayer19ReleaseTongueVictimEb"
+}
+
+"CTerrorPlayer::OnTongueBreak"
+{
+"library"	"server"
+"linux" "@_ZN13CTerrorPlayer19ReleaseTongueVictimEb"
+}
+
 "RoundRespawn"
 {
 	"library"	"server"

@@ -620,6 +620,10 @@ static Handle:hNightmareBegin           = INVALID_HANDLE;
 static Handle:hNightmareTime            = INVALID_HANDLE;
 static Handle:hCustomMapsOn           	= INVALID_HANDLE;
 
+static Handle:SDKOnPummelEnded          = INVALID_HANDLE;
+static Handle:SDKOnPounceEnd            = INVALID_HANDLE;
+static Handle:SDKOnTongueBreak          = INVALID_HANDLE;
+
 static bool:bBotControl			= false;
 static bool:bMenuOn			= false;
 static bool:bHealthDisplay		= false;
@@ -1127,6 +1131,8 @@ public OnPluginStart()
 	{
 		strcopy(CurrentClientID[i], 24, "");
 	}
+	
+	InitSDKCalls();
 }
 //=============================
 // StartUp
@@ -1339,6 +1345,62 @@ public OnMapStart()
 
 	ReturnChapterData();
 	iFogControl = 0;
+}
+InitSDKCalls()
+{
+	new Handle:ConfigFile = LoadGameConfigFile("l4d2addresses");
+	new Handle:MySDKCall = INVALID_HANDLE;
+
+	/////////////////
+	//OnPummelEnded//
+	/////////////////
+	StartPrepSDKCall(SDKCall_Player);
+	PrepSDKCall_SetFromConf(ConfigFile, SDKConf_Signature, "CTerrorPlayer::OnPummelEnded");
+	MySDKCall = EndPrepSDKCall();
+	if (MySDKCall == INVALID_HANDLE)
+	{
+		SetFailState("Cant initialize CTerrorPlayer::OnPummelEnded SDKCall");
+	}
+	SDKOnPummelEnded = CloneHandle(MySDKCall, SDKOnPummelEnded);
+
+	///////////////
+	//OnPounceEnd//
+	///////////////
+	StartPrepSDKCall(SDKCall_Player);
+	PrepSDKCall_SetFromConf(ConfigFile, SDKConf_Signature, "CTerrorPlayer::OnPounceEnd");
+	MySDKCall = EndPrepSDKCall();
+	if (MySDKCall == INVALID_HANDLE)
+	{
+		SetFailState("Cant initialize CTerrorPlayer::OnPounceEnd SDKCall");
+	}
+	SDKOnPounceEnd = CloneHandle(MySDKCall, SDKOnPounceEnd);
+
+	/////////////////
+	//OnTongueBreak//
+	/////////////////
+	StartPrepSDKCall(SDKCall_Player);
+	PrepSDKCall_SetFromConf(ConfigFile, SDKConf_Signature, "CTerrorPlayer::OnTongueBreak");
+	MySDKCall = EndPrepSDKCall();
+	if (MySDKCall == INVALID_HANDLE)
+	{
+		SetFailState("Cant initialize CTerrorPlayer::OnTongueBreak SDKCall");
+	}
+	SDKOnTongueBreak = CloneHandle(MySDKCall, SDKOnTongueBreak);
+
+	CloseHandle(ConfigFile);
+	CloseHandle(MySDKCall);
+}
+stock SDKCallOnPummelEnded(client)
+{
+	SDKCall(SDKOnPummelEnded, client);
+}
+stock SDKCallOnPounceEnd(client)
+{
+	SDKCall(SDKOnPounceEnd, client);
+}
+stock SDKCallOnTongueBreak(client)
+{
+	SDKCall(SDKOnTongueBreak, client);
 }
 stock CheckModelPreCache(const String:Modelfile[])
 {
@@ -11483,8 +11545,9 @@ stock BreakInfectedHold(client)
 			if (GetEntPropEnt(Survivor[1], Prop_Send, "m_pummelAttacker") == client)
 			{
 				//L4D2_PummelEnd(client);
-				PrintToServer("should break pummel");
-				CallResetAbility(client, 3.0); 
+			    PrintToServer("should break pummel");
+				SDKCallOnPummelEnded(client);
+				//CallResetAbility(client, 3.0); 
 			}
 		}
 		else if (IsSurvivor(Survivor[2]))
@@ -11499,6 +11562,7 @@ stock BreakInfectedHold(client)
 			if (GetEntPropEnt(Survivor[3], Prop_Send, "m_tongueOwner") == client)
 			{
 				PrintToServer("should break tongue");
+				SDKCallOnTongueBreak(client);
 				//L4D2_TongueBreak(client);
 			}
 		}
