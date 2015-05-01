@@ -15479,13 +15479,12 @@ stock KnifeInfected(client)
 				{
 					if (random >= 10)
 					{
-						if (0)
-						//if (IsSmoker(zombie))
+						if (IsSmoker(zombie))
 						{
 							decl Float:Origin[3], Float:TOrigin[3];
 							GetEntPropVector(client, Prop_Send, "m_vecOrigin", Origin);
 							GetEntPropVector(zombie, Prop_Send, "m_vecOrigin", TOrigin);
-                       					if (GetVectorDistance(Origin, TOrigin) > 125)
+                       		if (GetVectorDistance(Origin, TOrigin) > 125)
 							{
 								PrintToChat(client, "\x04[Knife]\x01 Cut Smokers Tongue!");
 								BreakInfectedHold(zombie);
