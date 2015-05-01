@@ -11482,7 +11482,8 @@ stock BreakInfectedHold(client)
 		{
 			if (GetEntPropEnt(Survivor[1], Prop_Send, "m_pummelAttacker") == client)
 			{
-				L4D2_PummelEnd(client);
+				//L4D2_PummelEnd(client);
+				CallResetAbility(client, 3.0); 
 			}
 		}
 		else if (IsSurvivor(Survivor[2]))
@@ -11496,11 +11497,38 @@ stock BreakInfectedHold(client)
 		{
 			if (GetEntPropEnt(Survivor[3], Prop_Send, "m_tongueOwner") == client)
 			{
-				L4D2_TongueBreak(client);
+				PrintToServer("should break tongue");
+				//L4D2_TongueBreak(client);
 			}
 		}
 	}
 }
+stock CallResetAbility(client,Float:time)
+{
+	static Handle:hStartActivationTimer=INVALID_HANDLE;
+	if (hStartActivationTimer==INVALID_HANDLE)
+	{
+		new Handle:hConf = INVALID_HANDLE;
+		hConf = LoadGameConfigFile("l4d2addresses");
+
+		StartPrepSDKCall(SDKCall_Entity);
+
+		PrepSDKCall_SetFromConf(hConf, SDKConf_Signature, "CBaseAbility::StartActivationTimer");
+		PrepSDKCall_AddParameter(SDKType_Float,SDKPass_Plain);
+		PrepSDKCall_AddParameter(SDKType_Float,SDKPass_Plain);
+
+		hStartActivationTimer = EndPrepSDKCall();
+		CloseHandle(hConf);
+		
+		if (hStartActivationTimer == INVALID_HANDLE)
+		{
+			SetFailState("Can't get CBaseAbility::StartActivationTimer SDKCall!");
+			return;
+		}            
+	}
+	new AbilityEnt=GetEntPropEnt(client, Prop_Send, "m_customAbility");
+	SDKCall(hStartActivationTimer, AbilityEnt, time, 0.0);
+}  
 stock ReturnChapterData()
 {
 	new campaign = 1;
