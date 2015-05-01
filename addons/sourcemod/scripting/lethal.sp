@@ -3773,7 +3773,6 @@ stock GetFinaleTankType()
 			}
 		}
 	}
-	survivorstrength = 60;
 	if (survivorstrength >= 60)
 	{
 		new random = GetRandomInt(1,60);
